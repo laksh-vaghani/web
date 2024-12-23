@@ -1,13 +1,9 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 
-interface QrCodeData {
-  qrCodeImage: string;
-  code: string;
-}
 
 export default function Home() {
-  const [qrCodeData, setQrCodeData] = useState<QrCodeData | null>(null);
+  const [qrCodeData, setQrCodeData] = useState(null);
 
   useEffect(() => {
     const URL = 'http://localhost:3000'
